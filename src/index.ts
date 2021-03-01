@@ -21,13 +21,29 @@ const usuarioRef = db.collection('usuario');
  //  activo: true
 //})
 
+//destructivo
+// usuarioRef
+ // .doc('BdS7f346XkMsGPVWFJbc')
+// .set({
+ //  activo: true,
+  // edad: 15,
+  // id: 566,
+// })
+
+
+//delete
+
 usuarioRef
-.doc('BdS7f346XkMsGPVWFJbc')
-.set({
-   activo: true,
-   edad: 15,
-   id: 566,
-})
+.doc('ko1PSYaoQVXSoIxpHUMW')
+.delete()
+.then( () => console.log('borrado') )
+.catch(e => console.log('error', e) );
+
+
+
+
+
+
 
 
 
