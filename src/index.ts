@@ -43,8 +43,11 @@ const usuarioRef = db.collection('usuario');
 //usuarioRef
 //.onSnapshot(retornaDocumentos)
 
-usuarioRef.get().then(snap => retornaDocumentos (snap) );
+usuarioRef.where('salario','>=',1500)
 
+.where('activo', '==',true)
+
+.get().then(retornaDocumentos);
 
 
 
